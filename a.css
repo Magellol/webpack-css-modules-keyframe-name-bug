@@ -1,0 +1,34 @@
+@value colorWhite, colorBlack from "./Colors.css";
+
+@keyframes placeholderAnimationKeyframes {
+  from {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 0.8;
+  }
+}
+
+.placeholderBackground {
+  background-color: colorBlack;
+}
+
+.placeholderAnimation {
+  animation: placeholderAnimationKeyframes 0.8s infinite alternate;
+}
+
+.placeholderBackgroundWithAnimation {
+  composes: placeholderBackground placeholderAnimation;
+}
+
+.placeholderText {
+  composes: placeholderBackgroundWithAnimation;
+
+  &:before {
+    /* Force one line height */
+
+    /* Hex code for non-breaking space */
+    content: "\00a0";
+  }
+}
