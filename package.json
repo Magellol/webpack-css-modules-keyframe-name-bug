@@ -3,7 +3,9 @@
     "build": "rm -rf dist/ && webpack --config webpack.config.js"
   },
   "dependencies": {
+    "@babel/core": "^7.10.5",
     "autoprefixer": "9.4.7",
+    "babel-loader": "^8.1.0",
     "css-loader": "2.1.0",
     "mini-css-extract-plugin": "^0.4.1",
     "optimize-css-assets-webpack-plugin": "^5.0.3",

@@ -48,14 +48,29 @@ const MEDIA_QUERIES = {
 };
 
 module.exports = {
+  devtool: "source-map",
+  mode: 'production',
   entry: "./index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].[chunkhash:5].js",
     chunkFilename: "[name].[chunkhash:5].js",
+    publicPath: "/a/",
   },
   module: {
     rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: "babel-loader",
+            options: {
+              cacheDirectory: ".babel-cache",
+            },
+          },
+        ],
+      },
       {
         test: /\.css$/,
         exclude: /node_modules/,
