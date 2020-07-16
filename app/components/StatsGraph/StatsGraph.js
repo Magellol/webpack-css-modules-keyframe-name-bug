@@ -1,3 +1,1 @@
-require('./StatsGraph.css');
-
-export default () => null;
+require("./StatsGraph.css");
