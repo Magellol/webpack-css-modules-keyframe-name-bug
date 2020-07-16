@@ -5,20 +5,20 @@ const postcssNesting = require("postcss-nesting");
 const RESOLVED_EXTENSIONS = [
   // start defaults
   // https://webpack.js.org/configuration/resolve/#resolveextensions
-  '.wasm',
-  '.mjs',
-  '.js',
-  '.json',
+  ".wasm",
+  ".mjs",
+  ".js",
+  ".json",
   // end defaults
-  '.ts',
-  '.tsx',
+  ".ts",
+  ".tsx",
 ];
 
 module.exports = {
   devtool: "source-map",
   stats: "errors-only",
-  mode: 'production',
-  entry: "./client/index.js",
+  mode: "production",
+  entry: "./app/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].[chunkhash:5].js",
@@ -41,14 +41,8 @@ module.exports = {
             },
           },
           {
-            loader: 'ts-loader',
+            loader: "ts-loader",
             options: {
-              // It's useful to see which TS config the loader is using
-              logLevel: 'info',
-              // We must set this explicit to workaround an issue with HappyPack
-              // https://github.com/amireh/happypack/issues/261
-              configFile: path.join(__dirname, 'tsconfig.json'),
-              // Replaces happy pack mode
               transpileOnly: true,
             },
           },
@@ -71,11 +65,7 @@ module.exports = {
             loader: "postcss-loader",
             options: {
               ident: "postcss",
-              plugins: [
-                postcssImport(),
-
-                postcssNesting(),
-              ],
+              plugins: [postcssImport(), postcssNesting()],
             },
           },
         ],
@@ -83,7 +73,6 @@ module.exports = {
     ],
   },
   optimization: {
-    chunkIds: "named",
     minimizer: [],
   },
 };
