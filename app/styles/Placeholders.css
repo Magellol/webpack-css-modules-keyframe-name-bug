@@ -15,11 +15,3 @@
 .placeholderAnimation {
   animation: placeholderAnimationKeyframes 0.8s infinite alternate;
 }
-
-.placeholderBackgroundWithAnimation {
-  composes: placeholderBackground placeholderAnimation;
-}
-
-.placeholderText {
-  composes: placeholderBackgroundWithAnimation;
-}

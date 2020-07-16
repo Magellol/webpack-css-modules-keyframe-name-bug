@@ -1,14 +1,5 @@
-@value placeholderText, placeholderAnimation from "~styles/Placeholders.css";
-
-.numberPlaceholder {
-  composes: placeholderText placeholderAnimation;
-}
+@value placeholderAnimation from "~styles/Placeholders.css";
 
 .topApplicationPlaceholder {
   composes: placeholderAnimation;
-
-  /* apply placeholder styles to odd rows */
-  &:nth-child(2n + 1) {
-    background-color: blue;
-  }
 }
