@@ -1,4 +1,3 @@
-import { reactLoadableProps } from 'routes/loadable-imports'
-import styles from './index.css'
+import { reactLoadableProps } from 'routes/loadable-imports';
 
-console.log(reactLoadableProps.Users.loader, styles)
+console.log(reactLoadableProps.Users.loader);

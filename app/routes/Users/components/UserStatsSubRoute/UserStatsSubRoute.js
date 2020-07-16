@@ -1,5 +1,14 @@
-import styles from './UserStatsSubRoute.css';
+import React from 'react';
 
-export default () => {
-    console.log(styles);
-}
+import PhotoFeed from 'components/PhotoFeed';
+
+import StatsFilter from './components/StatsFilter';
+import StatsGraph from './components/StatsGraph';
+
+const UserStatsSubRoute = () => (
+  <div>
+    <StatsFilter />
+    <StatsGraph />
+    <PhotoFeed />
+  </div>
+);

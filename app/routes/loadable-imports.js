@@ -1,7 +1,8 @@
 export const reactLoadableProps = {
     Users: {
-        // TODO: ?
-        // require.resolveWeak
-        loader: import(/* webpackChunkName: "user-route" */ './Users')
-    }
-}
+      loader: () => import(/* webpackChunkName: "user-route" */ './Users'),
+      chunkName: 'user-route',
+      resolve: () => require.resolveWeak('./Users'),
+    },
+  };
+  

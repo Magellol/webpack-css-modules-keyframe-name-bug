@@ -16,7 +16,9 @@
       "client/*": ["../client/*"],
       "server/*": ["../server/*"],
       "demos/*": ["../demos/*"]
-    }
+    },
+
+    "jsx": "react"
   },
   "files": ["./client/index.js"]
 }

@@ -1,0 +1,210 @@
+@value fontWeightSemibold, fontWeightBold from "~styles/Text.css";
+@value colorBlack, colorWhite, colorGrey100, colorGrey400, colorGrey700 from "~styles/Colors.css";
+@value resetAnchor from "~styles/Resets.css";
+@value placeholderText, placeholderAnimation from "~styles/Placeholders.css";
+
+.container {
+  border: 1px solid colorGrey400;
+
+  /* Force containers to take full, equal heights */
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  @media (--xs-max) {
+    margin: 16px;
+  }
+
+  @media (--sm-min) {
+    margin: 24px;
+  }
+}
+
+.cell {
+  margin-bottom: 8px;
+}
+
+.smallTitle {
+  composes: fontWeightSemibold;
+
+  font-size: 15px;
+}
+
+.title {
+  composes: smallTitle cell;
+}
+
+.number {
+  composes: fontWeightBold cell;
+
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.numberPlaceholder {
+  composes: number placeholderText placeholderAnimation;
+
+  width: 40%;
+}
+
+.rank {
+  font-size: 15px;
+  color: colorGrey700;
+}
+
+.rankPlaceholder {
+  composes: rank placeholderText placeholderAnimation;
+
+  width: 60%;
+}
+
+.chartContainer {
+  /* `tooltip` is relative to this */
+  position: relative;
+
+  /* Pushes chart to take remaining space if sub-copy is too long */
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.chart {
+  /* this avoids the on-hover dots from clipping */
+  overflow: visible;
+}
+
+.hoverRect {
+  fill: none;
+
+  /*
+  pointer-events is needed when fill is `none`
+  https://stackoverflow.com/a/9210392
+  */
+  pointer-events: all;
+}
+
+.circle {
+  stroke-width: 4;
+  stroke: colorWhite;
+  fill: #4eb482;
+
+  opacity: 0;
+
+  /* We use rectangles to widen the tooltip area */
+  pointer-events: none;
+}
+
+.details {
+  composes: section;
+
+  display: grid;
+
+  column-gap: 24px;
+  row-gap: 12px;
+
+  @media (--md-min) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (--sm-max) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.noDataOverlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgb(255, 255, 255, 0.6);
+}
+
+.fullOverlay {
+  composes: noDataOverlay;
+
+  grid-area: 1 / 1 / 3 / 3;
+}
+
+.topAppsOverlay {
+  composes: noDataOverlay;
+
+  grid-area: 1 / 1 / 3;
+}
+
+.topAppsTitle {
+  composes: smallTitle;
+
+  grid-area: 1 / 1;
+
+  display: flex;
+  align-items: center;
+}
+
+.infoIconWrapper {
+  /* `.infoTooltip` is absolute relative to this */
+  position: relative;
+
+  margin-left: 8px;
+}
+
+.infoIconContainer {
+  display: flex;
+}
+
+.infoIcon {
+  fill: colorGrey400;
+}
+
+.infoTooltip {
+  /* override default tooltip styles */
+  white-space: normal;
+
+  width: 200px;
+  bottom: 32px;
+
+  text-align: center;
+
+  /* horizontally center */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.topApplications {
+  grid-area: 2 / 1;
+
+  display: grid;
+  grid-auto-rows: 1fr;
+
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.topApplication {
+  composes: resetAnchor;
+
+  padding-left: 12px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  display: flex;
+  align-items: center;
+  color: colorBlack;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  /* apply styles to odd rows */
+  &:nth-child(2n + 1) {
+    background-color: colorGrey100;
+  }
+}
+
+.topApplicationPlaceholder {
+  composes: topApplication placeholderAnimation;
+
+  /* apply placeholder styles to odd rows */
+  &:nth-child(2n + 1) {
+    background-color: colorGrey400;
+  }
+}

@@ -1,0 +1,5 @@
+@value resetList from "~styles/Resets.css";
+
+.list {
+  composes: resetList;
+}
