@@ -1,5 +1,5 @@
 "file a";
 
-const styles = require("./a.css");
+import * as styles from "./a.css";
 
 console.log(styles.placeholderAnimation);
