@@ -1,7 +1,5 @@
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const webpack = require("webpack");
 const postcssImport = require("postcss-import");
 const postcssMixins = require("postcss-mixins");
 const postcssNesting = require("postcss-nesting");
