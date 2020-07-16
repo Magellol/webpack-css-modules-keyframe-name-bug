@@ -1,3 +1,3 @@
-import styles from './PhotoFeed.css';
+require("./PhotoFeed.css");
 
 export default () => null;

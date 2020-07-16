@@ -1,3 +1,3 @@
-import styles from './StatsGraph.css';
+require('./StatsGraph.css');
 
 export default () => null;
