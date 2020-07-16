@@ -1,4 +1,4 @@
-@value animation from "../../styles/Placeholders.css";
+@value animation from "../../styles.css";
 
 .topApplicationPlaceholder {
   composes: animation;
