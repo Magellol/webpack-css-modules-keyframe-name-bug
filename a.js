@@ -2,4 +2,4 @@
 
 const styles = require("./a.css");
 
-styles.placeholderAnimation;
+console.log(styles.placeholderAnimation);
