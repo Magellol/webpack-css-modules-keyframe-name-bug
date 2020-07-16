@@ -22,11 +22,4 @@
 
 .placeholderText {
   composes: placeholderBackgroundWithAnimation;
-
-  &:before {
-    /* Force one line height */
-
-    /* Hex code for non-breaking space */
-    content: "\00a0";
-  }
 }
