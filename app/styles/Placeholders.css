@@ -1,5 +1,3 @@
-@value colorWhite, colorGrey400 from "~styles/Colors.css";
-
 @keyframes placeholderAnimationKeyframes {
   from {
     opacity: 0.5;
@@ -11,7 +9,7 @@
 }
 
 .placeholderBackground {
-  background-color: colorGrey400;
+  background-color: blue;
 }
 
 .placeholderAnimation {
