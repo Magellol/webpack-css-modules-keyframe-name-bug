@@ -15,7 +15,7 @@ const RESOLVED_EXTENSIONS = [
 ];
 
 module.exports = {
-  devtool: "source-map",
+  devtool: "none",
   stats: "errors-only",
   mode: "production",
   entry: "./app/index.js",

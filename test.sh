@@ -12,9 +12,6 @@ for i in `seq $attempts`; do
   npm run build
   cp -r dist test-$i
 
-  rm -rf test-$i/*.map
-  rm -rf test-$i/*.json
-
   prev=`expr $i - 1`
   if [ "$prev" != "0" ]; then
     if git diff --quiet --no-index test-$prev test-$i; then
