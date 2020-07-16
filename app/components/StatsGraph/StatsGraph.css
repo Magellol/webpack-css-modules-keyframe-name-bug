@@ -1,5 +1,5 @@
-@value placeholderAnimation from "../../styles/Placeholders.css";
+@value animation from "../../styles/Placeholders.css";
 
 .topApplicationPlaceholder {
-  composes: placeholderAnimation;
+  composes: animation;
 }

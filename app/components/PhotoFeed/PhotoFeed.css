@@ -1,5 +1,5 @@
-@value placeholderBackground from "../../styles/Placeholders.css";
+@value bg from "../../styles/styles.css";
 
 .placeholderItem {
-  composes: placeholderBackground;
+  composes: bg;
 }
