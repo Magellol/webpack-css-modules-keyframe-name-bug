@@ -9,24 +9,11 @@ module.exports = {
   entry: "./app/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "[name].[chunkhash:5].js",
-    chunkFilename: "[name].[chunkhash:5].js",
-    publicPath: "/a/",
+    filename: "[name].[contenthash:5].js",
+    chunkFilename: "[name].[contenthash:5].js",
   },
   module: {
     rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: [
-          {
-            loader: "babel-loader",
-            options: {
-              cacheDirectory: ".babel-cache",
-            },
-          },
-        ],
-      },
       {
         test: /\.css$/,
         exclude: /node_modules/,
