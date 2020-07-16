@@ -1,26 +1,3 @@
-/* Confused? Read up about Bsscss: http://www.basscss.com/ */
-
-@import "basscss-layout/index.css";
-@import "basscss-margin/index.css";
-@import "basscss-padding/index.css";
-@import "basscss-grid/lib/grid.css";
-@import "basscss-grid/lib/sm-grid.css";
-@import "basscss-grid/lib/md-grid.css";
-@import "basscss-grid/lib/lg-grid.css";
-
-/* Variables used by basscss */
-:root {
-  --space-1: 4px;
-  --space-2: 12px;
-  --space-3: 36px;
-  --space-4: 72px;
-}
-
-/* Custom media used by basscss */
-@custom-media --breakpoint-sm (--sm-min);
-@custom-media --breakpoint-md (--md-min);
-@custom-media --breakpoint-lg (--lg-min);
-
 @value spacingUnit from "./Layout.css";
 
 /* Locals */
