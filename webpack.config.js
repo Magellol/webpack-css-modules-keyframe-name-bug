@@ -130,7 +130,7 @@ module.exports = {
 
                 // Must come before postcss-nesting as per docs
                 postcssMixins({
-                  mixinsFiles: path.join(__dirname, "styles", "Mixins.css"),
+                  mixinsFiles: path.join(__dirname, "app", "styles", "Mixins.css"),
                 }),
 
                 postcssNesting(),

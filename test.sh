@@ -1,4 +1,4 @@
-set -ex
+set -x
 
 trash .babel-cache dist
 
@@ -10,7 +10,7 @@ done
 
 for i in `seq $attempts`; do
   npm run build
-  cp -r dist/client test-$i
+  cp -r dist test-$i
 
   trash test-$i/**/*.map
   trash test-$i/**/*.json

@@ -1,0 +1,63 @@
+@value spacingUnit: 4px;
+
+/* Floats */
+.floatLeft {
+  float: left;
+}
+
+.floatRight {
+  float: right;
+}
+
+.centerItem {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Where these numbers are not unique, their order depends on the DOM order. */
+@value htmlStackingContextSubNav: 1;
+@value htmlStackingContextNav: 2;
+@value htmlStackingContextModal: 3;
+@value htmlStackingContextConfirmationBanner: 3;
+@value htmlStackingContextFixedBottom: 4;
+@value htmlStackingContextProgressBar: 4;
+@value htmlStackingContextFlash: 4;
+
+/* Stacking context specific to modal overlay */
+@value modalOverlayContextDragAndDropBackdrop: 0;
+
+/*
+ * Breakout content out of it's parent's container.
+ * Read more: https://css-tricks.com/full-width-containers-limited-width-parents/#article-header-id-6
+*/
+.breakoutItem {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+/*
+ * Helpers for block container sizing and fitting to children.
+ * Documented here: https://block-container-sizing.stackblitz.io
+*/
+
+/* shrink-to-fit and grow-to-fit children */
+.fitToChildren {
+  /* Shrink to fit child `img`. */
+  display: inline-block;
+
+  /* Remove white space below inline element:
+  http://salman-w.blogspot.com/2012/10/remove-space-below-images-and-inline-block-elements.html */
+  vertical-align: top;
+}
+
+/* grow-to-fit children only */
+.growToFitChildren {
+  composes: fitToChildren;
+
+  /* Never shrink below parent size */
+  min-width: 100%;
+}

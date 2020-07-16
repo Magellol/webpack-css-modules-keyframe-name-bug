@@ -1,0 +1,36 @@
+@value clearfix, container, col-12, sm-col-6, md-col-4 from "~styles/Grid.css";
+@value placeholderBackground from "~styles/Placeholders.css";
+
+.buttonFooterContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.placeholdersContainer {
+  /* Note: this must match `PhotoGrid.List.container` */
+  @media (--xs-max) {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+}
+
+@value placeholderGutter: 24px;
+
+.placeholderItemsContainer {
+  @mixin gutterContainer placeholderGutter;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.placeholderItemContainer {
+  composes: col-12 sm-col-6 md-col-4;
+
+  @mixin gutterItem placeholderGutter;
+}
+
+.placeholderItem {
+  composes: placeholderBackground;
+
+  padding-bottom: 70%; /* based on the average photo height */
+}
