@@ -9,7 +9,8 @@ for i in `seq $attempts`; do
 done
 
 for i in `seq $attempts`; do
-  npm run build
+  webpack --config webpack.config.js
+  
   cp -r dist test-$i
 
   prev=`expr $i - 1`

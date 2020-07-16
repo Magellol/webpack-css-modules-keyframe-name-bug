@@ -1,7 +1,4 @@
 {
-  "scripts": {
-    "build": "rm -rf dist/ && webpack --config webpack.config.js"
-  },
   "dependencies": {
     "css-loader": "2",
     "lodash": "^4.17.19",
