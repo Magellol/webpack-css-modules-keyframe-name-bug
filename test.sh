@@ -24,6 +24,4 @@ for i in `seq $attempts`; do
         exit 1
     fi
   fi
-
-  sleep 2
 done
