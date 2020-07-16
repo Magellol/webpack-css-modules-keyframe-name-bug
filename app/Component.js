@@ -1,12 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import PhotoFeed from './components/PhotoFeed/PhotoFeed';
-import StatsGraph from './components/StatsGraph/StatsGraph';
+const PhotoFeed = require("./components/PhotoFeed/PhotoFeed");
+const StatsGraph = require("./components/StatsGraph/StatsGraph");
 
-export default () => (
-  <div>
-    <StatsGraph />
-    <PhotoFeed />
-  </div>
-);
-
+export default () => {
+  PhotoFeed();
+  StatsGraph();
+};
