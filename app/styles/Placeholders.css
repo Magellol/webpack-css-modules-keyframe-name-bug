@@ -1,17 +1,7 @@
-@keyframes placeholderAnimationKeyframes {
-  from {
-    opacity: 0.5;
-  }
-
-  to {
-    opacity: 0.8;
-  }
-}
-
 .placeholderBackground {
   background-color: blue;
 }
 
 .placeholderAnimation {
-  animation: placeholderAnimationKeyframes 0.8s infinite alternate;
+  background-color: red;
 }
