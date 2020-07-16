@@ -1,8 +1,8 @@
 import React from 'react';
 
-import PhotoFeed from './components/PhotoFeed';
-import StatsFilter from './components/StatsFilter';
-import StatsGraph from './components/StatsGraph';
+import PhotoFeed from './components/PhotoFeed/PhotoFeed';
+import StatsFilter from './components/StatsFilter/StatsFilter';
+import StatsGraph from './components/StatsGraph/StatsGraph';
 
 export default () => (
   <div>
