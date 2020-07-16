@@ -66,7 +66,6 @@ module.exports = {
         test: /\.css$/,
         exclude: /node_modules/,
         use: [
-          MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
             options: {
@@ -99,18 +98,5 @@ module.exports = {
   optimization: {
     chunkIds: "named",
     minimizer: [],
-    splitChunks: {
-      chunks: "all",
-      minSize: 0,
-      maxAsyncRequests: 20,
-      maxInitialRequests: 20,
-    },
   },
-  plugins: [
-    new webpack.HashedModuleIdsPlugin(),
-    new MiniCssExtractPlugin({
-      filename: "main.[chunkhash:5].css",
-      chunkFilename: "[name].[chunkhash:5].css",
-    }),
-  ],
 };
