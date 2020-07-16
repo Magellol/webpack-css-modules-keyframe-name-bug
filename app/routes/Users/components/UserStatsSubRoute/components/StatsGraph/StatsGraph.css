@@ -1,21 +1,7 @@
-@value colorGrey400 from "~styles/Colors.css";
-@value resetAnchor from "~styles/Resets.css";
 @value placeholderText, placeholderAnimation from "~styles/Placeholders.css";
 
 .numberPlaceholder {
   composes: placeholderText placeholderAnimation;
-
-  width: 40%;
-}
-
-.rankPlaceholder {
-  composes: placeholderText placeholderAnimation;
-
-  width: 60%;
-}
-
-.topApplication {
-  composes: resetAnchor;
 }
 
 .topApplicationPlaceholder {
@@ -23,6 +9,6 @@
 
   /* apply placeholder styles to odd rows */
   &:nth-child(2n + 1) {
-    background-color: colorGrey400;
+    background-color: blue;
   }
 }
