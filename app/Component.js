@@ -1,2 +1,2 @@
-require("./components/PhotoFeed/PhotoFeed");
-require("./components/StatsGraph/StatsGraph");
+require("./components/A");
+require("./components/B");

@@ -1,4 +1,4 @@
-@value bg from "../../styles.css";
+@value bg from "../styles.css";
 
 .placeholderItem {
   composes: bg;
