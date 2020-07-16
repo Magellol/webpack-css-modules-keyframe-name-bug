@@ -1,4 +1,4 @@
-@value colorWhite, colorBlack from "./Colors.css";
+@value colorWhite, colorGrey400 from "~styles/Colors.css";
 
 @keyframes placeholderAnimationKeyframes {
   from {
@@ -11,7 +11,7 @@
 }
 
 .placeholderBackground {
-  background-color: colorBlack;
+  background-color: colorGrey400;
 }
 
 .placeholderAnimation {

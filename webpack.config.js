@@ -146,21 +146,21 @@ module.exports = {
   optimization: {
     chunkIds: "named",
     minimizer: [
-      new TerserPlugin({
-        sourceMap: true,
-        parallel: true,
-        cache: true,
-        terserOptions: {
-          // Enable React profiler in local production
-          // https://gist.github.com/bvaughn/25e6233aeb1b4f0cdb8d8366e54a3977
-          mangle: true,
+      // new TerserPlugin({
+      //   sourceMap: true,
+      //   parallel: true,
+      //   cache: true,
+      //   terserOptions: {
+      //     // Enable React profiler in local production
+      //     // https://gist.github.com/bvaughn/25e6233aeb1b4f0cdb8d8366e54a3977
+      //     mangle: true,
 
-          // Preserve display names for React components
-          keep_fnames: true,
-        },
-      }),
+      //     // Preserve display names for React components
+      //     keep_fnames: true,
+      //   },
+      // }),
 
-      new OptimizeCSSAssetsPlugin(),
+      // new OptimizeCSSAssetsPlugin(),
     ],
     splitChunks: {
       chunks: "all",
