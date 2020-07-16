@@ -1,19 +1,19 @@
 set -x
 
-trash .babel-cache dist
+rm -rf .babel-cache dist
 
 attempts=20
 
 for i in `seq $attempts`; do
-  trash test-$i
+  rm -rf test-$i
 done
 
 for i in `seq $attempts`; do
   npm run build
   cp -r dist test-$i
 
-  trash test-$i/**/*.map
-  trash test-$i/**/*.json
+  rm -rf test-$i/*.map
+  rm -rf test-$i/*.json
 
   prev=`expr $i - 1`
   if [ "$prev" != "0" ]; then
