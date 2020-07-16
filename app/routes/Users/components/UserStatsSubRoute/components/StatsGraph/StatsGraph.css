@@ -156,20 +156,6 @@
   fill: colorGrey400;
 }
 
-.infoTooltip {
-  /* override default tooltip styles */
-  white-space: normal;
-
-  width: 200px;
-  bottom: 32px;
-
-  text-align: center;
-
-  /* horizontally center */
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 .topApplications {
   grid-area: 2 / 1;
 
@@ -182,22 +168,6 @@
 
 .topApplication {
   composes: resetAnchor;
-
-  padding-left: 12px;
-  padding-top: 9px;
-  padding-bottom: 9px;
-  display: flex;
-  align-items: center;
-  color: colorBlack;
-
-  &:hover {
-    text-decoration: underline;
-  }
-
-  /* apply styles to odd rows */
-  &:nth-child(2n + 1) {
-    background-color: colorGrey100;
-  }
 }
 
 .topApplicationPlaceholder {
