@@ -1,0 +1,6 @@
+@value placeholderBackground from "~styles/Placeholders.css";
+
+.placeholder {
+  composes: placeholderBackground;
+  padding-bottom: 100%;
+}

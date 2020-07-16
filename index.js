@@ -1,2 +1,2 @@
-import(/* webpackChunkName: "a" */ './a');
-import(/* webpackChunkName: "b" */ './b');
+import * as X from './routes/loadable-imports'
+console.log(X)

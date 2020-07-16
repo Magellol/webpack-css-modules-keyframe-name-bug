@@ -1,3 +1,4 @@
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
@@ -47,6 +48,18 @@ const MEDIA_QUERIES = {
   "--lg-min": generateMediaQuery({ min: LARGE_MIN }),
 };
 
+const RESOLVED_EXTENSIONS = [
+  // start defaults
+  // https://webpack.js.org/configuration/resolve/#resolveextensions
+  '.wasm',
+  '.mjs',
+  '.js',
+  '.json',
+  // end defaults
+  '.ts',
+  '.tsx',
+];
+
 module.exports = {
   devtool: "source-map",
   mode: 'production',
@@ -56,6 +69,14 @@ module.exports = {
     filename: "[name].[chunkhash:5].js",
     chunkFilename: "[name].[chunkhash:5].js",
     publicPath: "/a/",
+  },
+  resolve: {
+    plugins: [
+      // Read the `baseUrl` and `paths` from `tsconfig.json` for use when resolving modules via webpack.
+      // https://github.com/TypeStrong/ts-loader#baseurl--paths-module-resolution
+      new TsconfigPathsPlugin({ extensions: RESOLVED_EXTENSIONS }),
+    ],
+    extensions: RESOLVED_EXTENSIONS,
   },
   module: {
     rules: [
@@ -69,6 +90,18 @@ module.exports = {
               cacheDirectory: ".babel-cache",
             },
           },
+          {
+            loader: 'ts-loader',
+            options: {
+              // It's useful to see which TS config the loader is using
+              logLevel: 'info',
+              // We must set this explicit to workaround an issue with HappyPack
+              // https://github.com/amireh/happypack/issues/261
+              configFile: path.join(__dirname, 'tsconfig.json'),
+              // Replaces happy pack mode
+              transpileOnly: true,
+            },
+          },
         ],
       },
       {
@@ -79,7 +112,7 @@ module.exports = {
           {
             loader: "css-loader",
             options: {
-              context: path.join(__dirname, ".."),
+              context: __dirname,
               modules: true,
               importLoaders: 1,
               localIdentName: "[hash:base64:5]",
