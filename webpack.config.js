@@ -1,6 +1,5 @@
 const path = require("path");
 const postcssImport = require("postcss-import");
-const postcssNesting = require("postcss-nesting");
 
 module.exports = {
   devtool: "none",
@@ -31,7 +30,7 @@ module.exports = {
             loader: "postcss-loader",
             options: {
               ident: "postcss",
-              plugins: [postcssImport(), postcssNesting()],
+              plugins: [postcssImport()],
             },
           },
         ],

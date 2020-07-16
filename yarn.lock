@@ -2452,13 +2452,6 @@ postcss-modules-values@^2.0.0:
     icss-replace-symbols "^1.1.0"
     postcss "^7.0.6"
 
-postcss-nesting@7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/postcss-nesting/-/postcss-nesting-7.0.0.tgz#6e26a770a0c8fcba33782a6b6f350845e1a448f6"
-  integrity sha512-WSsbVd5Ampi3Y0nk/SKr5+K34n52PqMqEfswu6RtU4r7wA8vSD+gM8/D9qq4aJkHImwn1+9iEFTbjoWsQeqtaQ==
-  dependencies:
-    postcss "^7.0.2"
-
 postcss-object-fit-images@1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/postcss-object-fit-images/-/postcss-object-fit-images-1.1.2.tgz#8b773043db14672ef6cd6f2cb1f0d8b26a9f573b"
