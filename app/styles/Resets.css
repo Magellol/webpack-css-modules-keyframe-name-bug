@@ -3,20 +3,3 @@
   margin-top: 0;
   margin-bottom: 0;
 }
-
-/* Unset user agent styles for text elements: h{1,2,3,4,5,6} */
-.resetHeading {
-  composes: resetText;
-
-  font-size: inherit;
-  font-weight: inherit;
-}
-
-/* Unset user agent styles for `a` (anchor) elements */
-.resetAnchor {
-  text-decoration: none;
-
-  /* Note: we apply styles to `a`, which comes after these styles in the cascade, but this still
-    wins because it's a class and thus has higher specificity. */
-  color: inherit;
-}
