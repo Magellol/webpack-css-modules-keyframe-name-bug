@@ -1,1 +1,2 @@
-require('./Component')
+require("./components/A");
+require("./components/B");
