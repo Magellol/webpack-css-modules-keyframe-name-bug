@@ -1,4 +1,4 @@
-@value spacingUnit from "./Layout.css";
+@value spacingUnit: 4px;
 
 /* Locals */
 @value gutter: calc(spacingUnit * 3);
