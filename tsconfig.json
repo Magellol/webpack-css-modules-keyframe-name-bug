@@ -4,19 +4,17 @@
 
     "outDir": "./target-tsc",
 
-    "baseUrl": "/"
+    "baseUrl": "app/",
+    // Note: it might be required to define those again in `jest.config.js`.
+    "paths": {
+      // START COPIED FROM `shared/tsconfig-base.json`
+      "shared/*": ["../shared/*"],
+      // END COPIED FROM `shared/tsconfig-base.json`
 
-    // "baseUrl": "app/",
-    // // Note: it might be required to define those again in `jest.config.js`.
-    // "paths": {
-    //   // START COPIED FROM `shared/tsconfig-base.json`
-    //   "shared/*": ["../shared/*"],
-    //   // END COPIED FROM `shared/tsconfig-base.json`
-
-    //   "client/*": ["../client/*"],
-    //   "server/*": ["../server/*"],
-    //   "demos/*": ["../demos/*"]
-    // }
+      "client/*": ["../client/*"],
+      "server/*": ["../server/*"],
+      "demos/*": ["../demos/*"]
+    }
   },
-  "files": ["./index.js"]
+  "files": ["./client/index.js"]
 }

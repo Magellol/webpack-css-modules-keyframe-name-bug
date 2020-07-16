@@ -63,7 +63,7 @@ const RESOLVED_EXTENSIONS = [
 module.exports = {
   devtool: "source-map",
   mode: 'production',
-  entry: "./index.js",
+  entry: "./client/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].[chunkhash:5].js",
