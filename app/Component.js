@@ -1,5 +1,3 @@
-import React from "react";
-
 const PhotoFeed = require("./components/PhotoFeed/PhotoFeed");
 const StatsGraph = require("./components/StatsGraph/StatsGraph");
 
