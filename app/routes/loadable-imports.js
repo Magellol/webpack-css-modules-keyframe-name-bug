@@ -1,4 +1,3 @@
 export const reactLoadableProps = {
-    Users: import(/* webpackChunkName: "user-route" */ './Users'),
-  };
-  
+  UsersStatsSubRoute: import(/* webpackChunkName: "user-stats-sub-route" */ './UserStatsSubRoute'),
+};
