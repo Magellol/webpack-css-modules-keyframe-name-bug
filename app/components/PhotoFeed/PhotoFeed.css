@@ -1,8 +1,5 @@
 @value placeholderBackground from "~styles/Placeholders.css";
 
-
 .placeholderItem {
   composes: placeholderBackground;
-
-  padding-bottom: 70%; /* based on the average photo height */
 }

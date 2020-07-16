@@ -1,7 +1,6 @@
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const path = require("path");
 const postcssImport = require("postcss-import");
-const postcssMixins = require("postcss-mixins");
 const postcssNesting = require("postcss-nesting");
 
 const RESOLVED_EXTENSIONS = [
@@ -79,11 +78,6 @@ module.exports = {
               ident: "postcss",
               plugins: [
                 postcssImport(),
-
-                // Must come before postcss-nesting as per docs
-                postcssMixins({
-                  mixinsFiles: path.join(__dirname, "app", "styles", "Mixins.css"),
-                }),
 
                 postcssNesting(),
               ],
