@@ -1,2 +1,3 @@
-import * as X from 'routes/loadable-imports'
-console.log(X)
+import { reactLoadableProps } from 'routes/loadable-imports'
+
+console.log(reactLoadableProps.Users.loader())
