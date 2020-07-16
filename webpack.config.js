@@ -2,18 +2,6 @@ const path = require("path");
 const postcssImport = require("postcss-import");
 const postcssNesting = require("postcss-nesting");
 
-const RESOLVED_EXTENSIONS = [
-  // start defaults
-  // https://webpack.js.org/configuration/resolve/#resolveextensions
-  ".wasm",
-  ".mjs",
-  ".js",
-  ".json",
-  // end defaults
-  ".ts",
-  ".tsx",
-];
-
 module.exports = {
   devtool: "none",
   stats: "errors-only",
@@ -25,9 +13,6 @@ module.exports = {
     chunkFilename: "[name].[chunkhash:5].js",
     publicPath: "/a/",
   },
-  resolve: {
-    extensions: RESOLVED_EXTENSIONS,
-  },
   module: {
     rules: [
       {
@@ -38,12 +23,6 @@ module.exports = {
             loader: "babel-loader",
             options: {
               cacheDirectory: ".babel-cache",
-            },
-          },
-          {
-            loader: "ts-loader",
-            options: {
-              transpileOnly: true,
             },
           },
         ],
