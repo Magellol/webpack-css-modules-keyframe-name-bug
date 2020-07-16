@@ -1,4 +1,3 @@
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const path = require("path");
 const postcssImport = require("postcss-import");
 const postcssNesting = require("postcss-nesting");
@@ -27,11 +26,6 @@ module.exports = {
     publicPath: "/a/",
   },
   resolve: {
-    plugins: [
-      // Read the `baseUrl` and `paths` from `tsconfig.json` for use when resolving modules via webpack.
-      // https://github.com/TypeStrong/ts-loader#baseurl--paths-module-resolution
-      new TsconfigPathsPlugin({ extensions: RESOLVED_EXTENSIONS }),
-    ],
     extensions: RESOLVED_EXTENSIONS,
   },
   module: {
