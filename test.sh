@@ -1,7 +1,5 @@
 set -x
 
-rm -rf .babel-cache dist
-
 attempts=20
 
 for i in `seq $attempts`; do
@@ -9,6 +7,8 @@ for i in `seq $attempts`; do
 done
 
 for i in `seq $attempts`; do
+  rm -rf .babel-cache dist
+
   webpack --config webpack.config.js
   
   cp -r dist test-$i
