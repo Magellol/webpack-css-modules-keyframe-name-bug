@@ -1,0 +1,5 @@
+@value placeholderAnimation from "~styles/Placeholders.css";
+
+.topApplicationPlaceholder {
+  composes: placeholderAnimation;
+}

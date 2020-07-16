@@ -1,0 +1,5 @@
+@value placeholderBackground from "~styles/Placeholders.css";
+
+.placeholderItem {
+  composes: placeholderBackground;
+}
