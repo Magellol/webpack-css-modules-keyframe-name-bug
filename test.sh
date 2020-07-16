@@ -21,6 +21,7 @@ for i in `seq $attempts`; do
         echo "NO difference between $prev and $i ✅"
     else
         echo "FOUND difference between $prev and $i ❌"
+        git diff --no-index test-$prev test-$i
         exit 1
     fi
   fi
